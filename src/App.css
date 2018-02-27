@@ -9,24 +9,3 @@
     margin-top: 60px;
 }
 
-.HeaderSection{
-    background-color: navy;
-    margin-right: 27px;
-    padding-bottom: 60px;
-}
-
-.HeaderWeather{
-    color: white;
-    padding-top: 20px;
-    margin-left: 150px;
-}
-
-.StudentID{
-    color: white;
-    margin-left: 285px;
-}
-
-.ChangeButton{
-    margin-left: 297px;
-}
-

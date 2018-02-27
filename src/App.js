@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 import './App.css';
+import HeaderSection from './Components/HeaderSection';
 
 //Main class. Keep all components separate in the components folder.
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
         studentID: "StudentID"
     }
 
+    //Changes the value of studentID in state.
     switchID(value) {
         this.setState({ studentID: value })
     }
@@ -18,12 +19,7 @@ class App extends Component {
         return (
             //All components go inside this div.
             <div className="App">
-                <div className="IphoneLayout" />
-                <div className="HeaderSection">
-                    <h1 className="HeaderWeather">QMULweather</h1>
-                    <h4 className="StudentID">{this.state.studentID}</h4>
-                    <button className="ChangeButton" onClick={(e) => { this.switchID("test"); }}>Change</button>
-                </div>
+                <HeaderSection studentID={this.state.studentID} onClick={(e) => { this.switchID("test"); }} />
             </div>
         );
     }
