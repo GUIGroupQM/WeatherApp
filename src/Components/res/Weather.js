@@ -3,6 +3,10 @@ import axios from 'axios';
 import './Weather.css';
 import LocationInfo from './LocationInfo';
 
+//This component gets the geocoding of a specific location from a google maps API.
+//It then gets the weather information of those coordinates from the openweathermap API.
+//Using google maps geocoding API creates a better and more accurate search for a location specified by user.
+
 //Holds path to Googles geocoding API
 const urlGeo = location => {
     let apiKey = 'AIzaSyDOC-a6MUoMMWMgr-QZMG60RC1mNmAkUic'
