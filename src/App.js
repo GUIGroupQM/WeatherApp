@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import HeaderSection from './Components/HeaderSection';
-import TodayWeather from './Components/TodayWeather';
+import Weather from './Components/Weather';
 
 //Main class. Keep all components separate in the components folder and import them here.
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
             //All components go inside this div.
             <div className="App">
                 <HeaderSection studentID={this.state.studentID} onClick={(e) => { this.switchID("test"); }} />
-                <TodayWeather city="London"/>
+                <Weather className="OtherLocation" location="London" />
             </div>
         );
     }
