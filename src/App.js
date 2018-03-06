@@ -17,11 +17,13 @@ class App extends Component {
 
 
     render() {
+
         return (
             //All components go inside this div.
             <div className="App">
-                <HeaderSection studentID={this.state.studentID} onClick={(e) => { this.switchID("test"); }} />
-                <Weather className="OtherLocation" location="London" />
+                <HeaderSection studentID={this.state.studentID} onClick={() => { this.switchID("test"); }} />
+                <Weather className="OtherLocation" location="London" forecast={false} />
+                <Weather className="MileEndForecast" location="London, Queen Mary" forecast={true} />
             </div>
         );
     }
