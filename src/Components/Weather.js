@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Weather.css';
 import LocationInfo from './LocationInfo';
 import ForecastLayout from './ForecastLayout';
 import searchicon from './res/searchicon.png';
