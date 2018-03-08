@@ -1,6 +1,7 @@
 import React from 'react';
 
 //Reusable component. Displays weather information for a location.
+//Weather information being the temperature, icon representing the weather conditions, and wind speed
 const LocationInfo = (props) => {
 
     const style = {

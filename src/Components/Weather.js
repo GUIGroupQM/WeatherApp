@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import axios from 'axios';
+
 import LocationInfo from './LocationInfo';
-import ForecastLayout from './ForecastLayout';
+
 import searchicon from './res/searchicon.png';
 import clear_sky_day from './res/clear_sky_day.png';
 import clear_sky_night from './res/clear_sky_night.png';
@@ -131,7 +133,7 @@ class Weather extends Component {
         })
     }
 
-    
+    //Function that returns an image element depending on the weather description passed to it.
     weatherIcon(description) {
         switch (description) {
             case 'Clear':
@@ -171,13 +173,18 @@ class Weather extends Component {
         }
     }
 
+    //Returns a table row with three columns displaying time, temperature, and a picture retrieved from weatherIcon() depending on the weather desciptio.
+    //Takes an integer, which will get the time, temp, and weather description information from arrays.
     dayForecast(int) {
+
+        //Block of logic reducing a string with time information to format (xx:xx)
         var str = String(this.state.forecastTimes[int])
         var fields = str.split(" ")
         var time = fields[1]
         fields = String(time).split(":")
         time = fields[0].concat(":" + fields[1])
 
+        //Inline styling
         const style = {
             row: {
                 fontSize: '20px'
@@ -204,11 +211,12 @@ class Weather extends Component {
 
     render() {
 
+        //Inline styling
         const style = {
             backgroundColor: 'gray',
             marginTop: '-20px',
             marginRight: '27px',
-            paddingBottom: '10px',
+            paddingBottom: '1px',
 
             searchButton: {
                 margin: 'auto',
@@ -234,13 +242,11 @@ class Weather extends Component {
                 marginRight: '220px',
                 backgroundColor: 'yellow',
                 paddingLeft: '3px'
-            },
-
-            table: {
-
             }
         }
 
+        //If loop determines whether to return a component allowing user to search for weather in a location, default being london, 
+        //or return a component forecasting weather information.
         if (!this.state.forecast) {
             return (
                 <div style={style}>

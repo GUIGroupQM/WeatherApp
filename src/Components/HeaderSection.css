@@ -1,20 +1,29 @@
 .HeaderSection {
-    background-color: navy;
+    background-position: top;
+    background-image: url("res/queen_mary.jpg");
+    background-repeat: no-repeat;
+    background-size: 400px 200px;
     margin-right: 27px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 .AppName {
-    color: white;
-    padding-top: 20px;
+    color: mediumblue;
+    text-shadow: -1px -1px 0 white;
+    padding-top: 30px;
     margin-left: 150px;
 }
 
-.StudentID {
-    color: white;
-    margin-left: 285px;
-}
-
-.ChangeButton {
-    margin-left: 297px;
+.TimetableBtn {
+    margin-left: 260px;
+    background-color: mediumblue;
+    border: none;
+    color: whitesmoke;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
