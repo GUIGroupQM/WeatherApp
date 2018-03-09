@@ -16,6 +16,8 @@ import shower_rain from './res/shower_rain.png';
 import snow from './res/snow.png';
 import thunderstorm from './res/thunderstorm.png';
 import clouds from './res/clouds.png';
+import sky from './res/sky.jpg';
+import sky_clouds from './res/sky_clouds.png';
 
 //This component gets the geocoding of a specific location from a google maps API.
 //It then gets the weather information of those coordinates from the openweathermap API.
@@ -187,14 +189,17 @@ class Weather extends Component {
         //Inline styling
         const style = {
             row: {
-                fontSize: '20px'
+                fontSize: '22px',
+                fontWeight: 'bold',
+
             },
 
             column1: {
+                fontSize: '20px',
+                textShadow: '1px 1px 0 white',
             },
 
             column2: {
-                color: 'white',
                 paddingLeft: '140px',
                 paddingRight: '5px'
             }
@@ -202,8 +207,8 @@ class Weather extends Component {
 
         return (
             <tr style={style.row}>
-                <td style={style.colum1}>{time}</td>
-                <td style={style.column2}>{this.state.forecastTemps[int]}</td>
+                <td>{time}</td>
+                <td style={style.column2}>{this.state.forecastTemps[int]}C</td>
                 <td >{this.weatherIcon(this.state.forecastDescriptions[int])}</td>
             </tr>
         );
@@ -213,7 +218,9 @@ class Weather extends Component {
 
         //Inline styling
         const style = {
-            backgroundColor: 'gray',
+            backgroundImage: "url(" + sky + ")",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: "380px 200px",
             marginTop: '-20px',
             marginRight: '27px',
             paddingBottom: '1px',
@@ -232,15 +239,18 @@ class Weather extends Component {
             },
 
             forecastSection: {
-                marginBottom: '-100px',
                 marginRight: '27px',
-                backgroundColor: 'green',
+                backgroundImage: "url(" + sky_clouds + ")",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '375px 390px',
+                paddingBottom: '6px'
             },
 
             header: {
                 margin: 'auto',
                 marginRight: '220px',
-                backgroundColor: 'yellow',
+                color: 'whitesmoke',
+                backgroundColor: 'black',
                 paddingLeft: '3px'
             }
         }
