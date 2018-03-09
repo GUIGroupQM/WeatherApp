@@ -10,7 +10,7 @@ const LocationInfo = (props) => {
 
         icon: {
             marginTop: '-85px',
-            marginLeft: '260px',
+            marginLeft: '275px',
             paddingBottom: '0px'
         },
 
